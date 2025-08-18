@@ -1,24 +1,30 @@
+import logo from '../assets/logo.svg';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import './Styles/SLStyles.css';
+import CircleProfile from '../Components/Icons/CircleProfile';
+import { NavLink } from 'react-router-dom';
+
 export default function Header() {
   return (
-    <header className="">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <a href="#" className="navbar-brand">
-            <img src="../assets/logo.svg" alt="" />
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
-    </header>
+    <Navbar expand="lg" bg="light" className="fixed-top my-navbar">
+      <Container className="text-center">
+        <Navbar.Brand as={NavLink} to="/">
+          <img src={logo} alt="Logo" width={50} height={50} />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav>
+            <Nav.Link href="#">Start learning</Nav.Link>
+            <NavDropdown title="Tests">
+              <NavDropdown.Item href="#">A1</NavDropdown.Item>
+              <NavDropdown.Item href="#">A2</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+        <Nav.Link as={NavLink} to="/profile">
+          <CircleProfile />
+        </Nav.Link>
+      </Container>
+    </Navbar>
   );
 }

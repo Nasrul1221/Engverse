@@ -1,0 +1,8 @@
+.bi-person-circle {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.bi-person-circle:hover {
+  color: #009dff;
+}
