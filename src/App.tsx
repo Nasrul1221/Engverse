@@ -1,6 +1,6 @@
 import { useRoutes } from 'react-router-dom';
 import SharedLayout from './Layout/SharedLayout';
-import Home from './Pages/Home';
+import Home from './Pages/Home/Home';
 import Profile from './Pages/Profile';
 
 export default function App() {

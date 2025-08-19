@@ -6,3 +6,12 @@
 .bi-person-circle:hover {
   color: #009dff;
 }
+
+.main-logo {
+  color: #242424;
+  transition: color 0.2s;
+}
+
+.main-logo:hover {
+  color: #009dff;
+}
