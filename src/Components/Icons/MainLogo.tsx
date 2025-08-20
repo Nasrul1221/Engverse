@@ -1,19 +1,25 @@
 import './styles.css';
 
-export default function MainLogo({ width }: { width: number }) {
+export default function MainLogo({
+  width,
+  variant,
+}: {
+  width: number;
+  variant: string;
+}) {
   return (
     <svg
       width={width}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="main-logo"
+      className={variant}
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0" />
+      <g id="SVGRepo_bgCarrier" strokeWidth="0" />
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <g id="SVGRepo_iconCarrier">
         {' '}

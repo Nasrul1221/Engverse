@@ -9,12 +9,12 @@ export default function Header() {
     <Navbar expand="sm" bg="light" className="fixed-top">
       <Container>
         <Navbar.Brand as={NavLink} to="/">
-          <MainLogo width={50} />
+          <MainLogo variant="main-logo" width={50} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#">Start learning</Nav.Link>
+            <Nav.Link href="#">Lessons</Nav.Link>
             <NavDropdown title="Tests">
               <NavDropdown.Item href="#">A1</NavDropdown.Item>
               <NavDropdown.Item href="#">A2</NavDropdown.Item>
