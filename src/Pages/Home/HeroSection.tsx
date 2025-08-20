@@ -4,7 +4,7 @@ import { Container, Button, Row, Col, Card } from 'react-bootstrap';
 
 export default function HeroSection() {
   return (
-    <section style={{ height: '90vh' }}>
+    <section style={{}}>
       <Container fluid className="p-4">
         <Row>
           <Col md={6}>
