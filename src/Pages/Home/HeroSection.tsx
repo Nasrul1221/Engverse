@@ -1,6 +1,6 @@
 import hero from '../../assets/hero-logo.svg';
 import './styles.css';
-import { Container, Button, Row, Col, Card } from 'react-bootstrap';
+import { Container, Button, Row, Col } from 'react-bootstrap';
 
 export default function HeroSection() {
   return (

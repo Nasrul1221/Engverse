@@ -33,18 +33,22 @@ export default function Footer() {
     <footer className="footer ">
       <Container className="py-3">
         <Row className="g-3 justify-content-center">
-          <Col xs={12} sm={8} md={10} lg={4}>
-            <MainLogo width={40} variant="footer-logo mb-2" />
-            {/* <div className="d-flex align-items-center gap-2">
-            <Email />
-            <p className="p-0 m-0 text-white small">fst20071221@gmail.com</p>
-          </div> */}
-            {infos.map((info) => (
-              <div className="d-flex align-items-center gap-2" key={info.id}>
-                {info.icon}
-                <p className="p-0 m-0 text-white small">{info.info}</p>
-              </div>
-            ))}
+          <Col
+            xs={12}
+            sm={8}
+            md={10}
+            lg={4}
+            className="d-flex align-items-start"
+          >
+            <div>
+              <MainLogo width={40} variant="footer-logo mb-3" />
+              {infos.map((info) => (
+                <div className="d-flex align-items-center gap-2" key={info.id}>
+                  {info.icon}
+                  <p className="p-0 m-0 text-white small">{info.info}</p>
+                </div>
+              ))}
+            </div>
           </Col>
           <Col sm={4} md={2} lg={4}>
             <p className="p-0 m-0 fw-bold text-white">Home</p>

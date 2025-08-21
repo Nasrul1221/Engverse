@@ -5,3 +5,7 @@
 .title-span {
   color: #009dff;
 }
+
+.my-card {
+  max-width: 100%;
+}
