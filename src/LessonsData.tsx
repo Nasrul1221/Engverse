@@ -4,6 +4,7 @@ type Type = 'Grammar' | 'Reading' | 'Vocabulary' | 'Listening';
 interface Lesson {
   title: string;
   id: number;
+  description: string;
 }
 
 type LessonsData = Record<Level, Record<Type, Lesson[]>>;
@@ -11,74 +12,320 @@ type LessonsData = Record<Level, Record<Type, Lesson[]>>;
 const data: LessonsData = {
   A1: {
     Grammar: [
-      { title: 'Present Simple Basics', id: 1 },
-      { title: 'To Be: Affirmative', id: 2 },
+      {
+        title: 'Present Simple Basics',
+        id: 1,
+        description:
+          'Learn how to form and use the Present Simple tense for everyday actions.',
+      },
+      {
+        title: 'To Be: Affirmative',
+        id: 2,
+        description:
+          'Understand affirmative sentences using "to be" in simple contexts.',
+      },
+      {
+        title: 'To Be: Negative & Questions',
+        id: 33,
+        description: 'Form negative sentences and questions with "to be".',
+      },
+      {
+        title: 'Simple Question Words',
+        id: 34,
+        description:
+          'Learn how to ask basic questions using who, what, where, and when.',
+      },
     ],
     Reading: [
-      { title: 'My Family', id: 3 },
-      { title: 'Daily Routines', id: 4 },
+      {
+        title: 'My Family',
+        id: 3,
+        description:
+          'Read a simple text about family members and relationships.',
+      },
+      {
+        title: 'Daily Routines',
+        id: 4,
+        description:
+          'Learn vocabulary related to everyday activities and schedules.',
+      },
+      {
+        title: 'My Home',
+        id: 35,
+        description:
+          'Practice reading simple descriptions of houses and rooms.',
+      },
     ],
     Vocabulary: [
-      { title: 'Numbers 1-20', id: 5 },
-      { title: 'Colors', id: 6 },
+      {
+        title: 'Numbers 1-20',
+        id: 5,
+        description: 'Learn to recognize and use numbers in everyday contexts.',
+      },
+      {
+        title: 'Colors',
+        id: 6,
+        description: 'Learn basic color names and how to describe objects.',
+      },
+      {
+        title: 'Days & Months',
+        id: 36,
+        description: 'Learn days of the week and months of the year.',
+      },
     ],
     Listening: [
-      { title: 'Greetings Conversation', id: 7 },
-      { title: 'Introducing Yourself', id: 8 },
+      {
+        title: 'Greetings Conversation',
+        id: 7,
+        description: 'Listen to simple greetings and practice responding.',
+      },
+      {
+        title: 'Introducing Yourself',
+        id: 8,
+        description:
+          'Practice listening to self-introductions and basic questions.',
+      },
+      {
+        title: 'Shopping Dialogue',
+        id: 37,
+        description: 'Understand simple conversations at a shop.',
+      },
     ],
   },
   A2: {
     Grammar: [
-      { title: 'Past Simple Regular Verbs', id: 9 },
-      { title: 'Past Simple Irregular Verbs', id: 10 },
+      {
+        title: 'Past Simple Regular Verbs',
+        id: 9,
+        description: 'Learn to form and use regular verbs in the past tense.',
+      },
+      {
+        title: 'Past Simple Irregular Verbs',
+        id: 10,
+        description:
+          'Understand and practice common irregular verbs in the past.',
+      },
+      {
+        title: 'Comparatives & Superlatives',
+        id: 38,
+        description: 'Learn to compare things using adjectives.',
+      },
+      {
+        title: 'Modal Verbs: Can & Must',
+        id: 39,
+        description: 'Practice expressing ability, possibility, and necessity.',
+      },
     ],
     Reading: [
-      { title: 'A Trip to the Market', id: 11 },
-      { title: 'My Weekend Plans', id: 12 },
+      {
+        title: 'A Trip to the Market',
+        id: 11,
+        description: 'Read a short story about shopping at a market.',
+      },
+      {
+        title: 'My Weekend Plans',
+        id: 12,
+        description: 'Practice reading about weekend activities.',
+      },
+      {
+        title: 'A Simple Recipe',
+        id: 40,
+        description: 'Learn vocabulary and instructions through a recipe.',
+      },
     ],
     Vocabulary: [
-      { title: 'Food & Drinks', id: 13 },
-      { title: 'Daily Activities', id: 14 },
+      {
+        title: 'Food & Drinks',
+        id: 13,
+        description: 'Learn common food and drink vocabulary.',
+      },
+      {
+        title: 'Daily Activities',
+        id: 14,
+        description: 'Expand your vocabulary for everyday routines.',
+      },
+      {
+        title: 'Clothing & Accessories',
+        id: 41,
+        description: 'Learn names of clothes and how to describe them.',
+      },
     ],
     Listening: [
-      { title: 'Ordering at a Cafe', id: 15 },
-      { title: 'Talking about Hobbies', id: 16 },
+      {
+        title: 'Ordering at a Cafe',
+        id: 15,
+        description: 'Listen to a dialogue at a cafe and practice responses.',
+      },
+      {
+        title: 'Talking about Hobbies',
+        id: 16,
+        description: 'Understand people talking about hobbies and free time.',
+      },
+      {
+        title: 'Asking for Directions',
+        id: 42,
+        description: 'Practice listening to simple directions in a city.',
+      },
     ],
   },
   B1: {
     Grammar: [
-      { title: 'Present Perfect vs Past Simple', id: 17 },
-      { title: 'Future Forms', id: 18 },
+      {
+        title: 'Present Perfect vs Past Simple',
+        id: 17,
+        description:
+          'Learn the difference between Present Perfect and Past Simple.',
+      },
+      {
+        title: 'Future Forms',
+        id: 18,
+        description:
+          'Practice using will, going to, and present continuous for future.',
+      },
+      {
+        title: 'Relative Clauses',
+        id: 43,
+        description: 'Use who, which, and that to connect ideas.',
+      },
+      {
+        title: 'Passive Voice',
+        id: 44,
+        description: 'Form and use the passive in different tenses.',
+      },
     ],
     Reading: [
-      { title: 'A Short Story', id: 19 },
-      { title: 'News Article', id: 20 },
+      {
+        title: 'A Short Story',
+        id: 19,
+        description: 'Read a story and answer comprehension questions.',
+      },
+      {
+        title: 'News Article',
+        id: 20,
+        description: 'Practice reading simple news articles for main ideas.',
+      },
+      {
+        title: 'Travel Blog',
+        id: 45,
+        description: 'Understand informal writing about travel experiences.',
+      },
     ],
     Vocabulary: [
-      { title: 'Travel & Transportation', id: 21 },
-      { title: 'Health & Fitness', id: 22 },
+      {
+        title: 'Travel & Transportation',
+        id: 21,
+        description: 'Learn vocabulary for trips, airports, and transport.',
+      },
+      {
+        title: 'Health & Fitness',
+        id: 22,
+        description:
+          'Expand vocabulary related to health, exercises, and routines.',
+      },
+      {
+        title: 'Jobs & Professions',
+        id: 46,
+        description: 'Learn common professions and job-related vocabulary.',
+      },
     ],
     Listening: [
-      { title: 'Interview Conversation', id: 23 },
-      { title: 'Radio Podcast', id: 24 },
+      {
+        title: 'Interview Conversation',
+        id: 23,
+        description:
+          'Listen to an interview and answer comprehension questions.',
+      },
+      {
+        title: 'Radio Podcast',
+        id: 24,
+        description:
+          'Practice listening to informal spoken English on radio topics.',
+      },
+      {
+        title: 'Telephone Conversation',
+        id: 47,
+        description: 'Understand common phrases used in phone conversations.',
+      },
     ],
   },
   B2: {
     Grammar: [
-      { title: 'Conditional Sentences', id: 25 },
-      { title: 'Reported Speech', id: 26 },
+      {
+        title: 'Conditional Sentences',
+        id: 25,
+        description: 'Learn first, second, and third conditionals.',
+      },
+      {
+        title: 'Reported Speech',
+        id: 26,
+        description: 'Practice reporting statements, questions, and commands.',
+      },
+      {
+        title: 'Gerunds & Infinitives',
+        id: 48,
+        description: 'Use gerunds and infinitives correctly in sentences.',
+      },
+      {
+        title: 'Advanced Modal Verbs',
+        id: 49,
+        description:
+          'Understand nuances of modal verbs like might, should, and must.',
+      },
     ],
     Reading: [
-      { title: 'Opinion Essay', id: 27 },
-      { title: 'Scientific Article', id: 28 },
+      {
+        title: 'Opinion Essay',
+        id: 27,
+        description: 'Read essays and identify arguments and supporting ideas.',
+      },
+      {
+        title: 'Scientific Article',
+        id: 28,
+        description:
+          'Understand key points and vocabulary in scientific texts.',
+      },
+      {
+        title: 'Editorial',
+        id: 50,
+        description: 'Analyze opinions and persuasive language in editorials.',
+      },
     ],
     Vocabulary: [
-      { title: 'Business English', id: 29 },
-      { title: 'Advanced Adjectives', id: 30 },
+      {
+        title: 'Business English',
+        id: 29,
+        description:
+          'Learn vocabulary used in business and workplace contexts.',
+      },
+      {
+        title: 'Advanced Adjectives',
+        id: 30,
+        description:
+          'Expand your descriptive language with advanced adjectives.',
+      },
+      {
+        title: 'Idioms & Phrasal Verbs',
+        id: 51,
+        description: 'Understand and use common idioms and phrasal verbs.',
+      },
     ],
     Listening: [
-      { title: 'Debate Recording', id: 31 },
-      { title: 'Lecture Audio', id: 32 },
+      {
+        title: 'Debate Recording',
+        id: 31,
+        description: 'Listen to debates and identify main points and opinions.',
+      },
+      {
+        title: 'Lecture Audio',
+        id: 32,
+        description:
+          'Practice understanding formal lectures and presentations.',
+      },
+      {
+        title: 'News Broadcast',
+        id: 52,
+        description: 'Listen to news programs and summarize key information.',
+      },
     ],
   },
 };

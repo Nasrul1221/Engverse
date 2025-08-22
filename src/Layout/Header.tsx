@@ -6,7 +6,7 @@ import MainLogo from '../Components/Icons/MainLogo';
 
 export default function Header() {
   return (
-    <Navbar expand="sm" bg="light" className="fixed-top">
+    <Navbar expand="sm" bg="light" className="fixed-top my-navbar">
       <Container>
         <Navbar.Brand as={NavLink} to="/">
           <MainLogo variant="main-logo" width={50} />
