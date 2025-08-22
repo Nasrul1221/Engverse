@@ -27,7 +27,7 @@ const cards: CardType[] = [
   {
     img: letterA,
     title: 'Vocabulary',
-    text: 'Writing shows your ability to organize ideas. By practicing, you’ll learn to create texts that are clear, correct, and impactful. Strong writing skills open doors in study, work, and daily life.',
+    text: "Writing shows your ability to organize ideas. By practicing, you'll learn to create texts that are clear, correct, and impactful. Strong writing skills open doors in study, work, and daily life.",
     buttonText: 'Start to find new words',
   },
   {
@@ -44,8 +44,8 @@ export default function CardsSection() {
       <h2 className="text-center display-5 fw-normal mb-4">
         Choose whatever you want
       </h2>
-      <Container fluid className="d-flex justify-content-center gap-3 ">
-        <Row>
+      <Container fluid>
+        <Row className="g-3">
           {cards.map((card) => (
             <Col xs={12} sm={6} md={4} lg={3}>
               <Card className="h-100">

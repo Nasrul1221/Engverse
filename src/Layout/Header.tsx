@@ -14,7 +14,9 @@ export default function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#">Lessons</Nav.Link>
+            <Nav.Link as={NavLink} to="/lessons">
+              Lessons
+            </Nav.Link>
             <NavDropdown title="Tests">
               <NavDropdown.Item href="#">A1</NavDropdown.Item>
               <NavDropdown.Item href="#">A2</NavDropdown.Item>
