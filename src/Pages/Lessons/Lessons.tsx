@@ -36,15 +36,53 @@ export default function Lessons() {
         show={show}
         setShow={setShow}
       >
-        <SideBar
-          setLevel={setLevel}
-          setType={setType}
-          type={type}
-          level={level}
-        />
+        <Form className="d-flex flex-column gap-3 mb-3">
+          <Form.Group controlId="level">
+            <Form.Label className="my-label">Level</Form.Label>
+            <Form.Select
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                setLevel(e.target.value as Level)
+              }
+              value={level}
+              name="level"
+              id="level"
+              aria-label="Choosing an english level"
+              size="sm"
+            >
+              <option value="A1">A1</option>
+              <option value="A2">A2</option>
+            </Form.Select>
+          </Form.Group>
+
+          <Form.Group controlId="type">
+            <Form.Label className="my-label">Type</Form.Label>
+            <Form.Select
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                setType(e.target.value as Type)
+              }
+              value={type}
+              name="type"
+              id="type"
+              aria-label="Choosing a type of a lesson"
+              size="sm"
+            >
+              <option value="Grammar">Grammar</option>
+              <option value="Listening">Listening</option>
+            </Form.Select>
+          </Form.Group>
+        </Form>
+
+        <Card>
+          <Card.Body className="d-flex flex-column gap-2">
+            <Card.Title>Additionally</Card.Title>
+            <Button disabled>Cheat sheets</Button>
+            <Button disabled>Watching hub</Button>
+            <Button disabled>Words</Button>
+          </Card.Body>
+        </Card>
       </MyOffcanvas>
 
-      <Container className="p-3">
+      <Container className="pt-4 ps-3 pe-3">
         <Button
           variant="outline-primary"
           onClick={() => setShow(true)}
