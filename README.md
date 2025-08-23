@@ -1,69 +1,24 @@
-# React + TypeScript + Vite
+# Engverse project
+This is the platform for learning English. It's going to be a versatile website with different opportunities, both for students and for teachers.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies
+- React + Vite
+- Typescript
+- Bootstrap \ Bootstrap Icons
 
-Currently, two official plugins are available:
+## Functionalities (for the time being)
+- Choosing level
+- Choosing a type of lesson
+- Examples of lessons (in the near future, it'll be real lessons)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screens
+It has a responsive design, so it will look normal on different devices:
+- Home page
+<img width="1894" height="904" alt="image" src="https://github.com/user-attachments/assets/00d84fef-e49a-48fd-9a1a-99b60b526e62" />
 
-## Expanding the ESLint configuration
+- Cards on home page
+<img width="1895" height="907" alt="image" src="https://github.com/user-attachments/assets/c7ee5454-9c28-4a42-b409-d25c0bd5f9a7" />
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Lessons page
+<img width="1892" height="897" alt="image" src="https://github.com/user-attachments/assets/22562b14-9628-4ea8-b8c7-7918eb9b8346" />
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
