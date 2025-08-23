@@ -1,4 +1,4 @@
-# Engverse project
+<img width="1892" height="897" alt="image" src="https://github.com/user-attachments/assets/53855c5d-f5e6-400f-b6b0-fe23fff282d2" /># Engverse project
 This is the platform for learning English. It's going to be a versatile website with different opportunities, both for students and for teachers.
 
 ## Technologies
@@ -13,4 +13,12 @@ This is the platform for learning English. It's going to be a versatile website 
 
 ## Screens
 It has a responsive design, so it will look normal on different devices:
+- Home page
 <img width="1894" height="904" alt="image" src="https://github.com/user-attachments/assets/00d84fef-e49a-48fd-9a1a-99b60b526e62" />
+
+- Cards on home page
+<img width="1895" height="907" alt="image" src="https://github.com/user-attachments/assets/c7ee5454-9c28-4a42-b409-d25c0bd5f9a7" />
+
+- Lessons page
+<img width="1892" height="897" alt="image" src="https://github.com/user-attachments/assets/22562b14-9628-4ea8-b8c7-7918eb9b8346" />
+
