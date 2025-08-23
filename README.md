@@ -1,4 +1,4 @@
-<img width="1892" height="897" alt="image" src="https://github.com/user-attachments/assets/53855c5d-f5e6-400f-b6b0-fe23fff282d2" /># Engverse project
+# Engverse project
 This is the platform for learning English. It's going to be a versatile website with different opportunities, both for students and for teachers.
 
 ## Technologies
