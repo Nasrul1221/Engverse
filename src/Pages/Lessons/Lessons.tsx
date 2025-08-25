@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Button, Form, Card, Col, Row, Container } from 'react-bootstrap';
-import data from '../../LessonsData';
+import myData from '../../LessonsData.json';
 import './styles.css';
 import MyOffcanvas from '../../Components/MyOffcanvas';
 import SideBar from './SideBar';
+import { NavLink } from 'react-router-dom';
 
 type Level = 'A1' | 'A2' | 'B1' | 'B2';
 type Type = 'Grammar' | 'Reading' | 'Vocabulary' | 'Listening';
@@ -12,7 +13,11 @@ interface Lesson {
   title: string;
   id: number;
   description: string;
+  path?: string;
 }
+
+type LessonsData = Record<Level, Record<Type, Lesson[]>>;
+const data: LessonsData = myData;
 
 export default function Lessons() {
   const [level, setLevel] = useState<Level>('A1');
@@ -94,7 +99,11 @@ export default function Lessons() {
           {lesson &&
             lesson.map((info: Lesson) => (
               <Col xs={12} sm={6} md={4} lg={3}>
-                <Card className="h-100">
+                <Card
+                  className="h-100"
+                  as={NavLink}
+                  to={`/lessons/${level}/${type}/${info.path}`}
+                >
                   <Card.Img />
                   <Card.Body>
                     <Card.Title>{info.title}</Card.Title>

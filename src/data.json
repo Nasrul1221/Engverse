@@ -1,0 +1,16 @@
+{
+  "A1": {
+    "Grammar": {
+      "present-simple-basics": {
+        "title": "Present Simple Basics",
+        "id": 1,
+        "content": "Test"
+      },
+      "to-be-affirmative": {
+        "title": "To Be: Affirmative",
+        "id": 2,
+        "description": "Understand affirmative sentences using \"to be\" in simple contexts."
+      }
+    }
+  }
+}
