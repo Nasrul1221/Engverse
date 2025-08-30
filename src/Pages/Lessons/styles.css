@@ -9,3 +9,21 @@
 .my-title-border {
   border: 1px solid #009dff;
 }
+
+.my-nav-link {
+  text-decoration: none;
+  border: 1px solid #009dff;
+  color: green;
+}
+
+.my-active {
+  color: red;
+}
+
+.numbered {
+  background-color: #009dff;
+  min-width: 27px;
+  height: 27px;
+  text-align: center;
+  border-radius: 50%;
+}

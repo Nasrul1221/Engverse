@@ -1,60 +1,47 @@
 // Styles
-import './styles.css';
-import '../../markdown-styles.css';
+import '../styles.css';
+import '../../../markdown-styles.css';
 
 // Data
-import myData from '../../data.json';
+import myData from '../../../data.json';
 
 // React && Hooks
 import { useParams } from 'react-router-dom';
+import { useMemo } from 'react';
 
 // Libraries
 import ReactMarkdown from 'react-markdown';
 import { Col, Container, Row, Accordion } from 'react-bootstrap';
 import remarkGfm from 'remark-gfm';
 import ReactPlayer from 'react-player';
-import Journal from '../../Components/Icons/Journal';
+import Journal from '../../../Components/Icons/Journal';
 
-type Level = 'A1' | 'A2' | 'B1' | 'B2';
-type Type = 'Grammar' | 'Reading' | 'Vocabulary' | 'Listening';
-type Id = string;
-
-interface Lesson {
-  title: string;
-  id: number;
-  content: string;
-  examples: string[];
-  exercises?: {
-    question: string;
-    type: 'text' | 'multipleChoice' | 'checkbox';
-    options?: string[];
-    answer?: string | string[];
-  }[];
-  audioUrl?: string;
-  videoUrl?: string;
-  tips?: string[];
-  links?: { text: string; url: string }[];
-}
-
-type LessonsData = Record<Level, Record<Type, Record<Id, Lesson>>>;
+// Types
+import {
+  type LessonsData,
+  type Lesson,
+  type Level,
+  type Type,
+  type Id,
+} from '../types';
 
 const data: LessonsData = myData;
-console.log(data);
 
-export default function Lesson() {
+export default function LessonPage() {
   const { level, type, id } = useParams<{
     level: Level;
     type: Type;
     id: Id;
   }>();
 
-  if (!level || !type || !id) {
-    return <div>Invalid params</div>;
-  }
+  const lesson: Lesson | undefined = useMemo(() => {
+    if (!level || !type || !id) {
+      return undefined;
+    }
+    return data[level][type][id];
+  }, [level, type, id]);
 
-  const lesson: Lesson = data[level][type][id];
-
-  return (
+  return lesson ? (
     <Container fluid="md" className="p-3">
       <Row className="gap-2 align-items-start">
         <Col xs={12} className="text-center p-0">
@@ -120,9 +107,12 @@ export default function Lesson() {
           <ReactPlayer
             src={lesson.videoUrl}
             style={{ width: '100%', height: 'auto', aspectRatio: '16/9' }}
+            controls
           />
         </Col>
       </Row>
     </Container>
+  ) : (
+    <div>Invalid path</div>
   );
 }

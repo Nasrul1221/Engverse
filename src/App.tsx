@@ -3,7 +3,9 @@ import SharedLayout from './Layout/SharedLayout';
 import Home from './Pages/Home/Home';
 import Profile from './Pages/Profile';
 import Lessons from './Pages/Lessons/Lessons';
-import Lesson from './Pages/Lessons/Lesson';
+import LessonPage from './Pages/Lessons/ExactLesson/LessonPage';
+import ExercisePage from './Pages/Lessons/ExactLesson/ExercisePage';
+import Lesson from './Pages/Lessons/ExactLesson/Lesson';
 
 export default function App() {
   const router = useRoutes([
@@ -26,6 +28,16 @@ export default function App() {
         {
           path: '/lessons/:level/:type/:id',
           element: <Lesson />,
+          children: [
+            {
+              index: true,
+              element: <LessonPage />,
+            },
+            {
+              path: 'exercises',
+              element: <ExercisePage />,
+            },
+          ],
         },
       ],
     },

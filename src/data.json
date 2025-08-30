@@ -15,12 +15,91 @@
         ],
         "exercises": [
           {
-            "question": "...",
+            "question": "I ... a teacher. \n",
             "type": "...",
             "options": ["..."],
-            "answer": "string | string[]"
+            "answer": "am"
+          },
+          {
+            "question": "You ... very kind.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "are"
+          },
+          {
+            "question": "He ... my friend.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "is"
+          },
+          {
+            "question": "We ... happy today.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "are"
+          },
+          {
+            "question": "She ... not at home.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "is"
+          },
+          {
+            "question": "They ... students.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "are"
+          },
+          {
+            "question": "It ... a sunny day.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "is"
+          },
+          {
+            "question": "I ... tired today.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "am"
+          },
+          {
+            "question": "You ... late for the meeting.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "are"
+          },
+          {
+            "question": "He ... a doctor.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "is"
+          },
+          {
+            "question": "She ... very friendly.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "is"
+          },
+          {
+            "question": "We ... in the park.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "are"
+          },
+          {
+            "question": "They ... ready for the test.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "are"
+          },
+          {
+            "question": "It ... cold outside.\n",
+            "type": "...",
+            "options": ["..."],
+            "answer": "is"
           }
         ],
+        "exercise-info": "## Input the correct form of Present Simple ***'to be'***",
         "audioUrl": "...",
         "videoUrl": "https://www.youtube.com/watch?v=2JuEB2AKQbc",
         "tips": ["..."],
