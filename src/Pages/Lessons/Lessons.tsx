@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button, Form, Card, Col, Row, Container } from 'react-bootstrap';
-import myData from '../../LessonsData.json';
+import myData from '../../cards.json';
 import './styles.css';
 import MyOffcanvas from '../../Components/MyOffcanvas';
 import SideBar from './SideBar';
@@ -98,15 +98,17 @@ export default function Lessons() {
         <Row className="g-3">
           {lesson &&
             lesson.map((info: Lesson) => (
-              <Col xs={12} sm={6} md={4} lg={3}>
+              <Col xs={12} sm={6} md={4} lg={3} key={info.id}>
                 <Card
-                  className="h-100"
+                  className="h-100 text-decoration-none"
                   as={NavLink}
                   to={`/lessons/${level}/${type}/${info.path}`}
                 >
                   <Card.Img />
                   <Card.Body>
-                    <Card.Title>{info.title}</Card.Title>
+                    <Card.Title style={{ color: '#009dff' }}>
+                      {info.title}
+                    </Card.Title>
                     <Card.Text>{info.description}</Card.Text>
                   </Card.Body>
                 </Card>

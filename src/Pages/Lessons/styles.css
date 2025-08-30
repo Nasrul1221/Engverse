@@ -1,3 +1,11 @@
 .my-label {
   color: #009dff;
 }
+
+.my-title {
+  color: #009dff;
+}
+
+.my-title-border {
+  border: 1px solid #009dff;
+}

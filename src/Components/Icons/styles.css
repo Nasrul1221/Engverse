@@ -3,6 +3,11 @@
   cursor: pointer;
 }
 
+.bi-journal {
+  font-size: 2rem;
+  color: #009dff;
+}
+
 .bi-person-circle:hover {
   color: #009dff;
 }
