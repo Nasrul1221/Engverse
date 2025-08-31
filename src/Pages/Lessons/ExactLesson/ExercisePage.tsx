@@ -41,7 +41,9 @@ export default function ExercisePage() {
         acc[`answer${i}`] = string().test('check-answer', 'Wrong', (value) => {
           if (value?.trim() === '') return false;
 
-          return value === ex.answer ? true : false;
+          return value?.toLowerCase() === ex.answer.toLowerCase()
+            ? true
+            : false;
         });
         return acc;
       },
