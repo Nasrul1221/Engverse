@@ -1,14 +1,14 @@
 // React && Hooks
-import { useFormik, Formik } from 'formik';
+import { Formik } from 'formik';
 import { useParams } from 'react-router-dom';
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 // Styles
 import '../styles.css';
 import '../../../markdown-styles.css';
 
 // Data
-import myData from '../../../data.json';
+import { lessonData } from '../../../data.ts';
 
 // Libraries
 import Form from 'react-bootstrap/Form';
@@ -17,26 +17,18 @@ import { string, object, StringSchema } from 'yup';
 import ReactMarkdown from 'react-markdown';
 
 // TS
-import {
-  type LessonsData,
-  type Lesson,
-  type Level,
-  type Type,
-  type Id,
-} from '../types';
-
-const data: LessonsData = myData;
+import { type Lesson, type Level, type Type, type Id } from '../types';
 
 export default function ExercisePage() {
   const { level, type, id } = useParams<{ level: Level; type: Type; id: Id }>();
 
   const lesson: Lesson | undefined = useMemo(() => {
     if (!level || !type || !id) return undefined;
-    return data[level][type][id];
+    return lessonData[level][type][id];
   }, [level, type, id]);
 
   const initialValues = lesson?.exercises?.reduce(
-    (acc, ex, i) => {
+    (acc, i) => {
       acc[`answer${i}`] = '';
       return acc;
     },
@@ -77,7 +69,7 @@ export default function ExercisePage() {
                     ),
                   }}
                 >
-                  {lesson['exercise-info']}
+                  {lesson.exerciseInfo}
                 </ReactMarkdown>
               </Card.Body>
             </Card>

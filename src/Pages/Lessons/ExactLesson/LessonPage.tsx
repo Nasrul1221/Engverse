@@ -3,7 +3,7 @@ import '../styles.css';
 import '../../../markdown-styles.css';
 
 // Data
-import myData from '../../../data.json';
+import { lessonData } from '../../../data.ts';
 
 // React && Hooks
 import { useParams } from 'react-router-dom';
@@ -17,15 +17,7 @@ import ReactPlayer from 'react-player';
 import Journal from '../../../Components/Icons/Journal';
 
 // Types
-import {
-  type LessonsData,
-  type Lesson,
-  type Level,
-  type Type,
-  type Id,
-} from '../types';
-
-const data: LessonsData = myData;
+import { type Lesson, type Level, type Type, type Id } from '../types';
 
 export default function LessonPage() {
   const { level, type, id } = useParams<{
@@ -38,7 +30,7 @@ export default function LessonPage() {
     if (!level || !type || !id) {
       return undefined;
     }
-    return data[level][type][id];
+    return lessonData[level][type][id];
   }, [level, type, id]);
 
   return lesson ? (

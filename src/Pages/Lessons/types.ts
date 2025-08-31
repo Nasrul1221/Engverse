@@ -13,7 +13,7 @@ export interface Lesson {
     options?: string[];
     answer: string;
   }[];
-  'exercise-info': string;
+  exerciseInfo: string;
   audioUrl?: string;
   videoUrl?: string;
   tips?: string[];
