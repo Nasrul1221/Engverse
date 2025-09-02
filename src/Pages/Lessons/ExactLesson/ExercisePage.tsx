@@ -1,7 +1,6 @@
 // React && Hooks
-import { Formik } from 'formik';
+import { useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useMemo } from 'react';
 
 // Styles
 import '../styles.css';
@@ -11,53 +10,67 @@ import '../../../markdown-styles.css';
 import { lessonData } from '../../../data.ts';
 
 // Libraries
-import Form from 'react-bootstrap/Form';
-import { Card, Col, Container, Row } from 'react-bootstrap';
-import { string, object, StringSchema } from 'yup';
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import ReactMarkdown from 'react-markdown';
 
 // TS
 import { type Lesson, type Level, type Type, type Id } from '../types';
+import TextExercise from './TextExercise.tsx';
+import OptionsExercise from './OptionsExercise.tsx';
+
+const obj = {
+  'exercise 1': TextExercise,
+  'exercise 2': OptionsExercise,
+  'exercise 3': TextExercise,
+};
 
 export default function ExercisePage() {
   const { level, type, id } = useParams<{ level: Level; type: Type; id: Id }>();
+
+  const [userExercise, setUserExercise] = useState<
+    'exercise 1' | 'exercise 2' | 'exercise 3'
+  >('exercise 1');
+
+  const Comp = obj[userExercise];
 
   const lesson: Lesson | undefined = useMemo(() => {
     if (!level || !type || !id) return undefined;
     return lessonData[level][type][id];
   }, [level, type, id]);
 
-  const initialValues = lesson?.exercises?.reduce(
-    (acc, i) => {
-      acc[`answer${i}`] = '';
-      return acc;
-    },
-    {} as Record<string, string>,
-  );
-
-  const validationSchema = object(
-    lesson?.exercises?.reduce(
-      (acc, ex, i) => {
-        acc[`answer${i}`] = string().test('check-answer', 'Wrong', (value) => {
-          if (value?.trim() === '') return false;
-
-          return value?.toLowerCase() === ex.answer.toLowerCase()
-            ? true
-            : false;
-        });
-        return acc;
-      },
-      {} as Record<string, StringSchema>,
-    ),
-  );
-
-  if (!lesson?.exercises || lesson.exercises.length === 0)
+  if (!lesson?.exercises || lesson.exercises.text.length === 0)
     return <div>No exercises yet</div>;
 
   return (
     <div className="mt-2">
       <Container fluid="sm" className="border rounded p-4 mb-3">
-        <Row className="d-flex gap-3">
+        <div className="d-flex gap-3">
+          <Button
+            variant={
+              userExercise === 'exercise 1' ? 'primary' : 'outline-primary'
+            }
+            onClick={() => setUserExercise('exercise 1')}
+          >
+            Exercise 1
+          </Button>
+          <Button
+            variant={
+              userExercise === 'exercise 2' ? 'primary' : 'outline-primary'
+            }
+            onClick={() => setUserExercise('exercise 2')}
+          >
+            Exercise 2
+          </Button>
+          <Button
+            variant={
+              userExercise === 'exercise 3' ? 'primary' : 'outline-primary'
+            }
+            onClick={() => setUserExercise('exercise 3')}
+          >
+            Exercise 3
+          </Button>
+        </div>
+        <Row className="d-flex gap-3 mt-4">
           <Col className="text-center order-lg-2">
             <h1 className="my-title my-title-border rounded p-2">
               {lesson.title}
@@ -78,54 +91,7 @@ export default function ExercisePage() {
           </Col>
 
           <Col xs="12" lg="6" className="order-lg-1">
-            <Formik
-              validationSchema={validationSchema}
-              initialValues={initialValues || {}}
-              onSubmit={() => console.log(1)}
-            >
-              {(formik) => (
-                <Form noValidate onSubmit={formik.handleSubmit}>
-                  {lesson?.exercises.flatMap((item, index) => (
-                    <div
-                      key={`div-${index}`}
-                      className="d-flex gap-1 align-items-center mb-3"
-                    >
-                      <div className="numbered me-2">{index + 1}</div>
-                      {item.question.split(' ').map((piece, pieceIndex) => {
-                        if (piece === '...') {
-                          return (
-                            <Form.Group key={`form-${pieceIndex}`}>
-                              <Form.Control
-                                type="text"
-                                {...formik.getFieldProps(`answer${index}`)}
-                                isValid={
-                                  formik.touched[`answer${index}`] &&
-                                  !formik.errors[`answer${index}`]
-                                }
-                                isInvalid={
-                                  formik.touched[`answer${index}`] &&
-                                  !!formik.errors[`answer${index}`]
-                                }
-                              ></Form.Control>
-                            </Form.Group>
-                          );
-                        }
-
-                        if (piece === '\n')
-                          return <br key={`br-${pieceIndex}`} />;
-
-                        return (
-                          <span
-                            key={`span-${pieceIndex}`}
-                            className="fs-6"
-                          >{` ${piece} `}</span>
-                        );
-                      })}
-                    </div>
-                  ))}
-                </Form>
-              )}
-            </Formik>
+            <Comp data={lesson} />
           </Col>
         </Row>
       </Container>

@@ -16,92 +16,154 @@ export const lessonData: LessonsData = {
           '\n***\n#### **Subject - We**\n- We are students\n- We are from Ukraine\n- We are happy\n',
           '\n***\n#### **Subject - They**\n- They are my friends\n- They are teachers\n- They are at home',
         ],
-        exercises: [
-          {
-            question: 'I ... a teacher. \n',
-            type: 'text',
-            options: ['...'],
-            answer: 'am',
-          },
-          {
-            question: 'You ... very kind.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'are',
-          },
-          {
-            question: 'He ... my friend.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'is',
-          },
-          {
-            question: 'We ... happy today.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'are',
-          },
-          {
-            question: 'She ... not at home.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'is',
-          },
-          {
-            question: 'They ... students.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'are',
-          },
-          {
-            question: 'It ... a sunny day.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'is',
-          },
-          {
-            question: 'I ... tired today.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'am',
-          },
-          {
-            question: 'You ... late for the meeting.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'are',
-          },
-          {
-            question: 'He ... a doctor.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'is',
-          },
-          {
-            question: 'She ... very friendly.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'is',
-          },
-          {
-            question: 'We ... in the park.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'are',
-          },
-          {
-            question: 'They ... ready for the test.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'are',
-          },
-          {
-            question: 'It ... cold outside.\n',
-            type: 'text',
-            options: ['...'],
-            answer: 'is',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'I ... a teacher. \n',
+              options: ['...'],
+              answer: 'am',
+            },
+            {
+              question: 'You ... very kind.\n',
+              options: ['...'],
+              answer: 'are',
+            },
+            {
+              question: 'He ... my friend.\n',
+              options: ['...'],
+              answer: 'is',
+            },
+            {
+              question: 'We ... happy today.\n',
+              options: ['...'],
+              answer: 'are',
+            },
+            {
+              question: 'She ... not at home.\n',
+              options: ['...'],
+              answer: 'is',
+            },
+            {
+              question: 'They ... students.\n',
+              options: ['...'],
+              answer: 'are',
+            },
+            {
+              question: 'It ... a sunny day.\n',
+              options: ['...'],
+              answer: 'is',
+            },
+            {
+              question: 'I ... tired today.\n',
+              options: ['...'],
+              answer: 'am',
+            },
+            {
+              question: 'You ... late for the meeting.\n',
+              options: ['...'],
+              answer: 'are',
+            },
+            {
+              question: 'He ... a doctor.\n',
+              options: ['...'],
+              answer: 'is',
+            },
+            {
+              question: 'She ... very friendly.\n',
+              options: ['...'],
+              answer: 'is',
+            },
+            {
+              question: 'We ... in the park.\n',
+              options: ['...'],
+              answer: 'are',
+            },
+            {
+              question: 'They ... ready for the test.\n',
+              options: ['...'],
+              answer: 'are',
+            },
+            {
+              question: 'It ... cold outside.\n',
+              options: ['...'],
+              answer: 'is',
+            },
+          ],
+          options: [
+            {
+              question: 'I ... a teacher',
+              options: ['', 'am', 'is', 'are'],
+              answer: 'am',
+            },
+            {
+              question: 'They ... ready for the test.\n',
+              options: ['', 'am', 'are'],
+              answer: 'are',
+            },
+            {
+              question: 'It ... cold outside.\n',
+              options: ['', 'is', 'am', 'are'],
+              answer: 'is',
+            },
+            {
+              question: 'I ... at home now.\n',
+              options: ['', 'am', 'is', 'are'],
+              answer: 'am',
+            },
+            {
+              question: 'You ... my best friend.\n',
+              options: ['', 'am', 'is', 'are'],
+              answer: 'are',
+            },
+            {
+              question: 'He ... very busy today.\n',
+              options: ['', 'am', 'is', 'are'],
+              answer: 'is',
+            },
+            {
+              question: 'She ... not hungry.\n',
+              options: ['', 'am', 'is', 'are'],
+              answer: 'is',
+            },
+            {
+              question: '... we ready to start.\n',
+              options: ['', 'Am', 'Is', 'Are'],
+              answer: 'Are',
+            },
+            {
+              question: 'They ... in the classroom.\n',
+              options: ['', 'am', 'is', 'are'],
+              answer: 'are',
+            },
+            {
+              question: '... it raining outside?\n',
+              options: ['', 'Am', 'Is', 'Are'],
+              answer: 'Is',
+            },
+            {
+              question: 'I ... very happy today.\n',
+              options: ['', 'am', 'is', 'are'],
+              answer: 'am',
+            },
+            {
+              question: 'You ... late for class.\n',
+              options: ['', 'am', 'is', 'are'],
+              answer: 'are',
+            },
+            {
+              question: 'He ... in the kitchen.\n',
+              options: ['', 'am', 'is', 'are'],
+              answer: 'is',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo:
           "## Input the correct form of Present Simple ***'to be'***",
         audioUrl: '...',
@@ -116,14 +178,29 @@ export const lessonData: LessonsData = {
         id: 0,
         content: '',
         examples: [],
-        exercises: [
-          {
-            question: 'string',
-            type: 'text',
-            options: ['...'],
-            answer: 'string',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'I ... a teacher',
+              options: ['am', 'is', 'are'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '',
         videoUrl: '',
@@ -137,14 +214,29 @@ export const lessonData: LessonsData = {
         id: 0,
         content: '',
         examples: [],
-        exercises: [
-          {
-            question: 'string',
-            type: 'text',
-            options: ['...'],
-            answer: 'string',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '',
         videoUrl: '',
@@ -158,14 +250,29 @@ export const lessonData: LessonsData = {
         id: 0,
         content: '',
         examples: [],
-        exercises: [
-          {
-            question: 'string',
-            type: 'text',
-            options: ['...'],
-            answer: 'string',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '',
         videoUrl: '',
@@ -181,14 +288,29 @@ export const lessonData: LessonsData = {
         id: 1,
         content: '',
         examples: [''],
-        exercises: [
-          {
-            question: 'I ... a teacher. \n',
-            type: 'text',
-            options: ['...'],
-            answer: 'am',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '...',
         videoUrl: '',
@@ -202,14 +324,29 @@ export const lessonData: LessonsData = {
         id: 0,
         content: '',
         examples: [],
-        exercises: [
-          {
-            question: 'string',
-            type: 'text',
-            options: ['...'],
-            answer: 'string',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '',
         videoUrl: '',
@@ -223,14 +360,29 @@ export const lessonData: LessonsData = {
         id: 0,
         content: '',
         examples: [],
-        exercises: [
-          {
-            question: 'string',
-            type: 'text',
-            options: ['...'],
-            answer: 'string',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '',
         videoUrl: '',
@@ -244,14 +396,29 @@ export const lessonData: LessonsData = {
         id: 0,
         content: '',
         examples: [],
-        exercises: [
-          {
-            question: 'string',
-            type: 'text',
-            options: ['...'],
-            answer: 'string',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '',
         videoUrl: '',
@@ -267,14 +434,29 @@ export const lessonData: LessonsData = {
         id: 1,
         content: '',
         examples: [''],
-        exercises: [
-          {
-            question: 'I ... a teacher. \n',
-            type: 'text',
-            options: ['...'],
-            answer: 'am',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '...',
         videoUrl: '',
@@ -288,14 +470,29 @@ export const lessonData: LessonsData = {
         id: 0,
         content: '',
         examples: [],
-        exercises: [
-          {
-            question: 'string',
-            type: 'text',
-            options: ['...'],
-            answer: 'string',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '',
         videoUrl: '',
@@ -309,14 +506,29 @@ export const lessonData: LessonsData = {
         id: 0,
         content: '',
         examples: [],
-        exercises: [
-          {
-            question: 'string',
-            type: 'text',
-            options: ['...'],
-            answer: 'string',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '',
         videoUrl: '',
@@ -330,14 +542,29 @@ export const lessonData: LessonsData = {
         id: 0,
         content: '',
         examples: [],
-        exercises: [
-          {
-            question: 'string',
-            type: 'text',
-            options: ['...'],
-            answer: 'string',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '',
         videoUrl: '',
@@ -353,14 +580,29 @@ export const lessonData: LessonsData = {
         id: 1,
         content: '',
         examples: [''],
-        exercises: [
-          {
-            question: 'I ... a teacher. \n',
-            type: 'text',
-            options: ['...'],
-            answer: 'am',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '...',
         videoUrl: '',
@@ -374,14 +616,29 @@ export const lessonData: LessonsData = {
         id: 0,
         content: '',
         examples: [],
-        exercises: [
-          {
-            question: 'string',
-            type: 'text',
-            options: ['...'],
-            answer: 'string',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '',
         videoUrl: '',
@@ -395,14 +652,29 @@ export const lessonData: LessonsData = {
         id: 0,
         content: '',
         examples: [],
-        exercises: [
-          {
-            question: 'string',
-            type: 'text',
-            options: ['...'],
-            answer: 'string',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '',
         videoUrl: '',
@@ -416,14 +688,29 @@ export const lessonData: LessonsData = {
         id: 0,
         content: '',
         examples: [],
-        exercises: [
-          {
-            question: 'string',
-            type: 'text',
-            options: ['...'],
-            answer: 'string',
-          },
-        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          checkbox: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+        },
         exerciseInfo: '',
         audioUrl: '',
         videoUrl: '',
