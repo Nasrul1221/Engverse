@@ -1,36 +1,34 @@
 import { type Lesson } from '../types';
 import { Field, Formik } from 'formik';
 import { Button, Form } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
 import { object, ObjectSchema, string, StringSchema } from 'yup';
+import '../styles.css';
 
-// type MyFormikProps = Record<string, string> | undefined;
-// type ValidationSchemaType = ObjectSchema<Record<string, string | undefined>>;
+interface ResultType {
+  showResult: boolean;
+  result: number;
+  allExercises: number;
+}
 
 interface Props {
   data: Lesson;
-  // initialValues: MyFormikProps;
-  // validationSchema: ValidationSchemaType;
+  setResult: (state: (prev: ResultType) => ResultType) => void;
 }
 
-export default function OptionsExercise({
-  data,
-  // initialValues,
-  // validationSchema,
-}: Props) {
-  const navigate = useNavigate();
-
+export default function OptionsExercise({ data, setResult }: Props) {
   const handleSubmit = (values: Record<string, string>) => {
     const keys = Object.values(values);
-    let result = 0;
 
     for (let i = 0; i < keys.length; i++) {
-      if (keys[i] === data?.exercises.options[i].answer) result++;
+      if (keys[i] === data?.exercises.options[i].answer)
+        setResult((prev: ResultType) => ({ ...prev, result: prev.result + 1 }));
     }
 
-    navigate('/result', {
-      state: { result: result, allExercices: keys.length },
-    });
+    setResult((prev: ResultType) => ({
+      ...prev,
+      showResult: true,
+      allExercises: keys.length,
+    }));
   };
 
   const initialValues = data?.exercises?.options.reduce(
@@ -83,7 +81,8 @@ export default function OptionsExercise({
                     <Field
                       as={Form.Select}
                       name={`answer${index}`}
-                      key={`form-${pieceIndex}`}
+                      key={`form-${index}`}
+                      className="max-width"
                     >
                       {data.exercises.options[index].options?.map((item) => (
                         <option key={item} value={item}>

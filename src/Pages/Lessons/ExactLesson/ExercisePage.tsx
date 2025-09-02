@@ -17,15 +17,28 @@ import ReactMarkdown from 'react-markdown';
 import { type Lesson, type Level, type Type, type Id } from '../types';
 import TextExercise from './TextExercise.tsx';
 import OptionsExercise from './OptionsExercise.tsx';
+import Embedded from './EmbeddedExercise.tsx';
+import Result from './Result.tsx';
 
 const obj = {
   'exercise 1': TextExercise,
   'exercise 2': OptionsExercise,
-  'exercise 3': TextExercise,
+  'exercise 3': Embedded,
 };
+
+interface ResultType {
+  showResult: boolean;
+  result: number;
+  allExercises: number;
+}
 
 export default function ExercisePage() {
   const { level, type, id } = useParams<{ level: Level; type: Type; id: Id }>();
+  const [result, setResult] = useState<ResultType>({
+    showResult: false,
+    result: 0,
+    allExercises: 0,
+  });
 
   const [userExercise, setUserExercise] = useState<
     'exercise 1' | 'exercise 2' | 'exercise 3'
@@ -42,14 +55,21 @@ export default function ExercisePage() {
     return <div>No exercises yet</div>;
 
   return (
-    <div className="mt-2">
+    <div className="mt-2" style={{ minHeight: '90vh' }}>
       <Container fluid="sm" className="border rounded p-4 mb-3">
-        <div className="d-flex gap-3">
+        <div className="d-flex gap-3 flex-wrap">
           <Button
             variant={
               userExercise === 'exercise 1' ? 'primary' : 'outline-primary'
             }
-            onClick={() => setUserExercise('exercise 1')}
+            onClick={() => {
+              setUserExercise('exercise 1');
+              setResult({
+                showResult: false,
+                result: 0,
+                allExercises: 0,
+              });
+            }}
           >
             Exercise 1
           </Button>
@@ -57,7 +77,14 @@ export default function ExercisePage() {
             variant={
               userExercise === 'exercise 2' ? 'primary' : 'outline-primary'
             }
-            onClick={() => setUserExercise('exercise 2')}
+            onClick={() => {
+              setUserExercise('exercise 2');
+              setResult({
+                showResult: false,
+                result: 0,
+                allExercises: 0,
+              });
+            }}
           >
             Exercise 2
           </Button>
@@ -65,7 +92,14 @@ export default function ExercisePage() {
             variant={
               userExercise === 'exercise 3' ? 'primary' : 'outline-primary'
             }
-            onClick={() => setUserExercise('exercise 3')}
+            onClick={() => {
+              setUserExercise('exercise 3');
+              setResult({
+                showResult: false,
+                result: 0,
+                allExercises: 0,
+              });
+            }}
           >
             Exercise 3
           </Button>
@@ -91,7 +125,11 @@ export default function ExercisePage() {
           </Col>
 
           <Col xs="12" lg="6" className="order-lg-1">
-            <Comp data={lesson} />
+            {result.showResult ? (
+              <Result resultData={result} />
+            ) : (
+              <Comp data={lesson} setResult={setResult} result={result} />
+            )}
           </Col>
         </Row>
       </Container>

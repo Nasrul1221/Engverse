@@ -156,11 +156,11 @@ export const lessonData: LessonsData = {
               answer: 'is',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
-              options: ['...'],
               answer: 'string',
+              link: 'https://wordwall.net/embed/ec1297bce4bc4c4ebcd37a7229685dc7?themeId=1&templateId=36&fontStackId=0',
             },
           ],
         },
@@ -193,10 +193,9 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
-              options: ['...'],
               answer: 'string',
             },
           ],
@@ -229,7 +228,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -265,7 +264,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -303,7 +302,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -339,7 +338,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -375,7 +374,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -411,7 +410,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -449,7 +448,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -485,7 +484,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -521,7 +520,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -557,7 +556,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -595,7 +594,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -631,7 +630,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -667,7 +666,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],
@@ -703,7 +702,7 @@ export const lessonData: LessonsData = {
               answer: 'string',
             },
           ],
-          checkbox: [
+          wordwall: [
             {
               question: 'string',
               options: ['...'],

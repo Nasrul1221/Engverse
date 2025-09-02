@@ -1,27 +1,34 @@
 import { type Lesson } from '../types';
 import { Formik } from 'formik';
 import { Button, Form } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
 import { object, string, StringSchema, type ObjectSchema } from 'yup';
+import '../styles.css';
+
+interface ResultType {
+  showResult: boolean;
+  result: number;
+  allExercises: number;
+}
 
 interface Props {
   data: Lesson;
+  setResult: (state: (prev: ResultType) => ResultType) => void;
 }
 
-export default function TextExercise({ data }: Props) {
-  const navigate = useNavigate();
-
+export default function TextExercise({ data, setResult }: Props) {
   const handleSubmit = (values: Record<string, string>) => {
     const keys = Object.values(values);
-    let result = 0;
 
     for (let i = 0; i < keys.length; i++) {
-      if (keys[i] === data?.exercises.text[i].answer) result++;
+      if (keys[i] === data?.exercises.text[i].answer)
+        setResult((prev: ResultType) => ({ ...prev, result: prev.result + 1 }));
     }
 
-    navigate('/result', {
-      state: { result: result, allExercices: keys.length },
-    });
+    setResult((prev: ResultType) => ({
+      ...prev,
+      showResult: true,
+      allExercises: keys.length,
+    }));
   };
 
   const initialValues = data?.exercises?.text.reduce(
@@ -72,6 +79,7 @@ export default function TextExercise({ data }: Props) {
                   return (
                     <Form.Group key={`form-${pieceIndex}`}>
                       <Form.Control
+                        className="max-width"
                         type="text"
                         {...formik.getFieldProps(`answer${index}`)}
                         isValid={
