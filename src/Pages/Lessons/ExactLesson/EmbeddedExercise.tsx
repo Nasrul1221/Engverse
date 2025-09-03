@@ -1,18 +1,11 @@
 import type { Lesson } from '../types';
 import '../styles.css';
 
-interface ResultType {
-  showResult: boolean;
-  result: number;
-  allExercises: number;
-}
-
 interface Props {
   data: Lesson;
-  setResult: (state: ResultType) => void;
 }
 
-export default function Embedded({ data, setResult }: Props) {
+export default function Embedded({ data }: Props) {
   return (
     <div className="embedded-wordwall">
       <iframe

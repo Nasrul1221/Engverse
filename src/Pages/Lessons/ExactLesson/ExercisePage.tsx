@@ -39,10 +39,18 @@ export default function ExercisePage() {
     result: 0,
     allExercises: 0,
   });
-
   const [userExercise, setUserExercise] = useState<
     'exercise 1' | 'exercise 2' | 'exercise 3'
   >('exercise 1');
+
+  const handleClick = (name: 'exercise 1' | 'exercise 2' | 'exercise 3') => {
+    setUserExercise(name);
+    setResult({
+      showResult: false,
+      result: 0,
+      allExercises: 0,
+    });
+  };
 
   const Comp = obj[userExercise];
 
@@ -62,14 +70,7 @@ export default function ExercisePage() {
             variant={
               userExercise === 'exercise 1' ? 'primary' : 'outline-primary'
             }
-            onClick={() => {
-              setUserExercise('exercise 1');
-              setResult({
-                showResult: false,
-                result: 0,
-                allExercises: 0,
-              });
-            }}
+            onClick={() => handleClick('exercise 1')}
           >
             Exercise 1
           </Button>
@@ -77,14 +78,7 @@ export default function ExercisePage() {
             variant={
               userExercise === 'exercise 2' ? 'primary' : 'outline-primary'
             }
-            onClick={() => {
-              setUserExercise('exercise 2');
-              setResult({
-                showResult: false,
-                result: 0,
-                allExercises: 0,
-              });
-            }}
+            onClick={() => handleClick('exercise 2')}
           >
             Exercise 2
           </Button>
@@ -93,12 +87,7 @@ export default function ExercisePage() {
               userExercise === 'exercise 3' ? 'primary' : 'outline-primary'
             }
             onClick={() => {
-              setUserExercise('exercise 3');
-              setResult({
-                showResult: false,
-                result: 0,
-                allExercises: 0,
-              });
+              handleClick('exercise 3');
             }}
           >
             Exercise 3
@@ -128,7 +117,7 @@ export default function ExercisePage() {
             {result.showResult ? (
               <Result resultData={result} />
             ) : (
-              <Comp data={lesson} setResult={setResult} result={result} />
+              <Comp data={lesson} setResult={setResult} />
             )}
           </Col>
         </Row>

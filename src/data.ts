@@ -7,7 +7,7 @@ export const lessonData: LessonsData = {
         title: "Present Simple 'to be'",
         id: 1,
         content:
-          "## Present simple forms of '**to be**'\n The verb **'to be'** is one of the most important verbs in English. It is used to describe people, things, feelings, professions, nationality, location, and states. \n| Subject | Form | Positive | Negative | Question |\n|---------|------|---------|----------|----------|\n| I | am | I am | I am not | Am I |\n| You | are | You are | You are not | Are you |\n| He\\She\\It | is | She is | He is not | Is it |\n| We | are | We are | We are not | Are we |\n| They | are | They are | They are not | Are they |\n\n As you may notice we use this structure - ***Subject + verb***\n\n ***Subject*** is someone or something that completes an action.",
+          "## Present simple forms of '**to be**'\n The verb **'to be'** is one of the most important verbs in English. It is used to describe people, things, feelings, professions, nationality, location, and states. \n| Subject | Form | Positive | Negative | Question |\n|---------|------|---------|----------|----------|\n| I | am | I am | I am not | Am I |\n| You | are | You are | You are not | Are you |\n| He\\She\\It | is | She is | He is not | Is it |\n| We | are | We are | We are not | Are we |\n| They | are | They are | They are not | Are they |\n\n As you may notice we use this structure - ***Subject + verb***\n\n ***Subject*** is someone or something that completes an action.\n\n ### Main **subjects** \n - **I** - we use when you talk about yourself. \n\n\t*Example* - **I am happy**\n - **You** - used when you talk to one person or many people. \n\n\t*Example* - **You are my friend**\n - **He** - used for a man or boy.\n\n\t*Example* - **He is my brother**\n - **She** - used for a woman or girl. \n\n\t*Example* - **She is my teacher**\n - **It** - used for objects, animals, places, or situations. \n\n\t*Example* - **It is a sunny day**\n - **We** - used when you talk about yourself and other people together. \n\n\t*Example* - **We are classmates**\n - **They** - used for people, animals, or things in plural. \n\n\t*Example* - **They are in the park** \n ### Short **forms** \n |  | I | You | We | They | He-She-It |\n|---|---|-----|----|------|-----------|\n| Positive | I'm | You're | We're | They're | He's |\n| Negative | I'm not | You're not \\ aren't | We're not \\ aren't | They're not \\ aren't | She's not \\ isn't |",
         examples: [
           '### Examples',
           '\n #### **Subject - I**\n - I am a doctor\n - I am hungry\n - I am a teacher',
@@ -126,7 +126,7 @@ export const lessonData: LessonsData = {
               answer: 'is',
             },
             {
-              question: '... we ready to start.\n',
+              question: 'We ... ready to start.\n',
               options: ['', 'Am', 'Is', 'Are'],
               answer: 'Are',
             },
@@ -136,7 +136,7 @@ export const lessonData: LessonsData = {
               answer: 'are',
             },
             {
-              question: '... it raining outside?\n',
+              question: 'It ... raining outside?\n',
               options: ['', 'Am', 'Is', 'Are'],
               answer: 'Is',
             },

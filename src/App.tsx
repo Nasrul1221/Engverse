@@ -6,7 +6,6 @@ import Lessons from './Pages/Lessons/Lessons';
 import LessonPage from './Pages/Lessons/ExactLesson/LessonPage';
 import ExercisePage from './Pages/Lessons/ExactLesson/ExercisePage';
 import Lesson from './Pages/Lessons/ExactLesson/Lesson';
-import Result from './Pages/Lessons/ExactLesson/Result';
 
 export default function App() {
   const router = useRoutes([

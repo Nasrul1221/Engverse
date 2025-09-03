@@ -46,6 +46,7 @@ export default function LessonPage() {
             remarkPlugins={[remarkGfm]}
             components={{
               h2: ({ ...props }) => <h2 className="text-center" {...props} />,
+              h3: ({ ...props }) => <h3 className="mb-3" {...props} />,
               strong: ({ ...props }) => (
                 <strong className="bold-paragraph" {...props} />
               ),
