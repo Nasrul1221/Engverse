@@ -71,9 +71,9 @@ export default function TextExercise({ data, setResult }: Props) {
           {data?.exercises.text.flatMap((item, index) => (
             <div
               key={`div-${index}`}
-              className="d-flex gap-1 align-items-center mb-3"
+              className="d-flex flex-wrap gap-1 align-items-center mb-3"
             >
-              <div className="numbered me-2">{index + 1}</div>
+              <div className="numbered me-2 ">{index + 1}</div>
               {item.question.split(' ').map((piece, pieceIndex) => {
                 if (piece === '...') {
                   return (

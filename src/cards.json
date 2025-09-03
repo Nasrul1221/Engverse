@@ -8,20 +8,10 @@
         "path": "present-simple-to-be"
       },
       {
-        "title": "To Be: Affirmative",
+        "title": "Simple word order",
         "id": 2,
-        "description": "Understand affirmative sentences using \"to be\" in simple contexts.",
-        "path": "to-be-affirmative"
-      },
-      {
-        "title": "To Be: Negative & Questions",
-        "id": 33,
-        "description": "Form negative sentences and questions with \"to be\"."
-      },
-      {
-        "title": "Simple Question Words",
-        "id": 34,
-        "description": "Learn how to ask basic questions using who, what, where, and when."
+        "description": "In English, words follow a clear structure: Subject + Verb + Object + (place) + (time). This fixed order helps make sentences easy to understand.",
+        "path": "simple-word-order"
       }
     ],
     "Reading": [

@@ -56,6 +56,7 @@ export default function LessonPage() {
                 </div>
               ),
               th: ({ ...props }) => <th scope="col" {...props} />,
+              p: ({ ...props }) => <p className="fs-5" {...props} />,
             }}
           >
             {lesson.content}
