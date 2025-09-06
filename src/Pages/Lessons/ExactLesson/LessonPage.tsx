@@ -15,6 +15,7 @@ import { Col, Container, Row, Accordion } from 'react-bootstrap';
 import remarkGfm from 'remark-gfm';
 import ReactPlayer from 'react-player';
 import Journal from '../../../Components/Icons/Journal';
+import { myPlugin } from '../../../Plugins/RemarkPlugin.ts';
 
 // Types
 import { type Lesson, type Level, type Type, type Id } from '../types';
@@ -43,7 +44,7 @@ export default function LessonPage() {
         </Col>
         <Col xs={12} lg={6} className="border rounded p-4">
           <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
+            remarkPlugins={[remarkGfm, myPlugin]}
             components={{
               h2: ({ ...props }) => <h2 className="text-center" {...props} />,
               h3: ({ ...props }) => <h3 className="mb-3" {...props} />,
@@ -57,6 +58,10 @@ export default function LessonPage() {
               ),
               th: ({ ...props }) => <th scope="col" {...props} />,
               p: ({ ...props }) => <p className="fs-5" {...props} />,
+              ul: ({ ...props }) => <ul className="list-group" {...props} />,
+              li: ({ ...props }) => (
+                <li className="list-group-item" {...props} />
+              ),
             }}
           >
             {lesson.content}
