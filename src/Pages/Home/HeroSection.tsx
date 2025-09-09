@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import hero from '../../assets/hero-logo.svg';
 import './styles.css';
 import { Container, Button, Row, Col } from 'react-bootstrap';
@@ -18,7 +19,9 @@ export default function HeroSection() {
                 platform for learning English
               </p>
               <div className="d-flex gap-5 mt-5">
-                <Button size="lg">Start Learning</Button>
+                <NavLink to="/lessons" className="btn btn-primary btn-lg">
+                  Start learning
+                </NavLink>
               </div>
             </div>
           </Col>

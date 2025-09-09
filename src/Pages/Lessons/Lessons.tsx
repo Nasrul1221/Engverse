@@ -4,7 +4,7 @@ import myData from '../../cards.json';
 import './styles.css';
 import MyOffcanvas from '../../Components/MyOffcanvas';
 import SideBar from './SideBar';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 type Level = 'A1' | 'A2' | 'B1' | 'B2';
 type Type = 'Grammar' | 'Reading' | 'Vocabulary' | 'Listening';
@@ -20,8 +20,9 @@ type LessonsData = Record<Level, Record<Type, Lesson[]>>;
 const data: LessonsData = myData;
 
 export default function Lessons() {
+  const location = useLocation();
   const [level, setLevel] = useState<Level>('A1');
-  const [type, setType] = useState<Type>('Grammar');
+  const [type, setType] = useState<Type>(location.state || 'Grammar');
   const [show, setShow] = useState(false);
 
   const lesson = data[level][type];

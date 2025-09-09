@@ -45,6 +45,8 @@ export default function SideBar({ setLevel, level, setType, type }: MyProps) {
           >
             <option value="Grammar">Grammar</option>
             <option value="Listening">Listening</option>
+            <option value="Vocabulary">Vocabulary</option>
+            <option value="Reading">Reading</option>
           </Form.Select>
         </Form.Group>
       </Form>

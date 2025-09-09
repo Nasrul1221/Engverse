@@ -10,7 +10,6 @@ export const myPlugin = () => (tree: Root) => {
     (node: Paragraph, index?: number, parent?: Parent) => {
       const firstText = node.children[0] as Text;
 
-      // console.log(start);
       if (!parent) return;
 
       if (
