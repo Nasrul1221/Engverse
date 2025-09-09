@@ -389,6 +389,171 @@ export const lessonData: LessonsData = {
         tips: ['...'],
         links: [{ text: '...', url: '...' }],
       },
+      'present-simple-affirmative': {
+        title: 'Present simple. Affirmative',
+        id: 0,
+        content:
+          "Before we start, I advise you to check this topic [Simple word order](http://localhost:5173/Engverse#/lessons/A1/Grammar/simple-word-order) \n\n***\n\n **Present Simple affirmative** is used to talk about:  \n * Habits (things you do regularly)  \n * General truths / Facts  \n * Routines  \n * Schedules / Timetables  \n * States or feelings \n\n *** \n\n Here is the basic formula:  \n **Subject** + **Verb** *(+ s/es for he/she/it)* + **object** + *(place)* + *(time)* \n\n ## Subject + Verb table \n\n | Subject | Verb form |  \n|-----------|-----------|  \n| I | play |  \n| You | play |  \n| He / She / It | plays |  \n| We | play |  \n| They | play | \n\n As you may notice, we add **-s** at the end of the **verb** with **he / she / it**. Let's see how to form the **3rd** person: \n\n* **Most verbs: add -s**\n  * work → works, live → lives\n * **Verbs ending in -o, -ch, -sh, -ss, -x, -z: add -es:**\n   * go → goes, watch → watches, fix → fixes\n * **Verbs ending in -y:**\n   * consonant + y → change y → ies: study → studies\n   * vowel + y → just add -s: play → plays\n * **Irregular verbs:**\n   * have → has\n   * do → does\n   * be → I am, you/we/they are, he/she/it is",
+        examples: [
+          '### Examples',
+
+          '\n#### **Daily Actions**\n- I wake up at 7 a.m.\n- She eats breakfast every morning.\n- We go to school on weekdays.',
+
+          '\n***\n#### **Likes and Preferences**\n- I like chocolate.\n- He enjoys playing football.\n- They love reading books.',
+
+          '\n***\n#### **Places / Locations**\n- I live in London.\n- She works at a hospital.\n- We stay at home in the evenings.',
+
+          '\n***\n#### **Routines / Schedules**\n- He goes to work every day.\n- We watch movies on Sundays.\n- The train leaves at 9 a.m.',
+
+          '\n***\n#### **Full Sentences with Object, Place, and Time**\n- I eat breakfast at home every morning.\n- She reads a book in the library every day.\n- We watch movies at the cinema on Saturdays.',
+        ],
+
+        exercises: {
+          text: [
+            {
+              question: 'I ... (play) football every Sunday.',
+              options: ['...'],
+              answer: 'play',
+            },
+            {
+              question: 'She ... (like) chocolate.',
+              options: ['...'],
+              answer: 'likes',
+            },
+            {
+              question: 'We ... (go) to school by bus.',
+              options: ['...'],
+              answer: 'go',
+            },
+            {
+              question: 'He ... (watch) TV in the evening.',
+              options: ['...'],
+              answer: 'watches',
+            },
+            {
+              question: 'My cat ... (sleep) on the sofa.',
+              options: ['...'],
+              answer: 'sleeps',
+            },
+            {
+              question: 'They ... (study) English at school.',
+              options: ['...'],
+              answer: 'study',
+            },
+            {
+              question: 'You ... (like) pizza.',
+              options: ['...'],
+              answer: 'like',
+            },
+            {
+              question: 'The sun ... (rise) in the east.',
+              options: ['...'],
+              answer: 'rises',
+            },
+            {
+              question: 'We ... (play) chess on weekends.',
+              options: ['...'],
+              answer: 'play',
+            },
+            {
+              question: 'She ... (read) a book every night.',
+              options: ['...'],
+              answer: 'reads',
+            },
+          ],
+
+          options: [
+            {
+              question: 'I ... football every day.',
+              options: ['', 'play', 'plays', 'playing'],
+              answer: 'play',
+            },
+            {
+              question: 'She ... pizza.',
+              options: ['', 'like', 'likes', 'liking'],
+              answer: 'likes',
+            },
+            {
+              question: 'We ... English at school.',
+              options: ['', 'study', 'studies', 'studying'],
+              answer: 'study',
+            },
+            {
+              question: 'He ... to work every morning.',
+              options: ['', 'go', 'goes', 'going'],
+              answer: 'goes',
+            },
+            {
+              question: 'They ... movies on Sundays.',
+              options: ['', 'watch', 'watches', 'watching'],
+              answer: 'watch',
+            },
+            {
+              question: 'I ... in London.',
+              options: ['', 'live', 'lives', 'living'],
+              answer: 'live',
+            },
+            {
+              question: 'She ... at a hospital.',
+              options: ['', 'work', 'works', 'working'],
+              answer: 'works',
+            },
+            {
+              question: 'We ... at home in the evenings.',
+              options: ['', 'stay', 'stays', 'staying'],
+              answer: 'stay',
+            },
+            {
+              question: 'He ... up at 7 a.m.',
+              options: ['', 'wake', 'wakes', 'waking'],
+              answer: 'wakes',
+            },
+            {
+              question: 'I ... breakfast at home every morning.',
+              options: ['', 'eat', 'eats', 'eating'],
+              answer: 'eat',
+            },
+            {
+              question: 'She ... a book in the library every day.',
+              options: ['', 'read', 'reads', 'reading'],
+              answer: 'reads',
+            },
+            {
+              question: 'We ... movies at the cinema on Saturdays.',
+              options: ['', 'watch', 'watches', 'watching'],
+              answer: 'watch',
+            },
+            {
+              question: 'My cat ... milk.',
+              options: ['', 'like', 'likes', 'liking'],
+              answer: 'likes',
+            },
+            {
+              question: 'He ... a small car.',
+              options: ['', 'have', 'has', 'having'],
+              answer: 'has',
+            },
+            {
+              question: 'They ... to the park twice a week.',
+              options: ['', 'go', 'goes', 'going'],
+              answer: 'go',
+            },
+          ],
+
+          wordwall: [
+            {
+              question: 'string',
+              link: 'https://wordwall.net/ru/embed/a35238e748974303a6e0470cc634e436?themeId=62&templateId=5&fontStackId=0',
+              answer: 'string',
+            },
+          ],
+        },
+        exerciseInfo: '## Input the right form of the verb',
+        audioUrl: '',
+        videoUrl: 'https://www.youtube.com/watch?v=a40K198s96E',
+        tips: [],
+        links: [{ text: '...', url: '...' }],
+      },
     },
     Reading: {
       lesson1: {

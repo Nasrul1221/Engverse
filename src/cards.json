@@ -12,6 +12,12 @@
         "id": 2,
         "description": "In English, words follow a clear structure: Subject + Verb + Object + (place) + (time). This fixed order helps make sentences easy to understand.",
         "path": "simple-word-order"
+      },
+      {
+        "title": "Present simple. Affirmative",
+        "id": 3,
+        "description": "Affirmative sentences in the Present Simple show that something happens regularly, is generally true, or is a fact. They state information in a direct and positive way.",
+        "path": "present-simple-affirmative"
       }
     ],
     "Reading": [
