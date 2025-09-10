@@ -3,7 +3,7 @@
   background-color: rgba(255, 19, 3, 0.15);
   position: relative;
   padding: 0 0 0.4rem 0.4rem;
-  min-height: 120px;
+  min-height: 40px;
   max-height: 250px;
   /* display: flex;
   flex-direction: column;
@@ -16,6 +16,8 @@
   font-size: 1.3rem;
   margin: 0;
   padding-top: 0.4rem;
+  color: rgba(255, 19, 3, 0.7);
+  font-weight: bold;
 }
 
 .danger-container::before {
@@ -36,7 +38,7 @@
   background-color: rgba(40, 167, 69, 0.15);
   position: relative;
   padding: 0 0 0.4rem 0.4rem;
-  min-height: 120px;
+  min-height: 40px;
   max-height: 250px;
   /* display: flex;
   flex-direction: column;

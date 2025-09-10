@@ -165,7 +165,7 @@ export const lessonData: LessonsData = {
           ],
         },
         exerciseInfo:
-          "## Input the correct form of Present Simple ***'to be'***",
+          "#### Input the correct form of Present Simple ***'to be'***",
         audioUrl: '...',
         videoUrl: 'https://www.youtube.com/watch?v=2JuEB2AKQbc',
         tips: ['...'],
@@ -383,7 +383,7 @@ export const lessonData: LessonsData = {
             },
           ],
         },
-        exerciseInfo: '## Input the right **word order**',
+        exerciseInfo: '#### Input the right **word order**',
         audioUrl: '...',
         videoUrl: 'https://www.youtube.com/watch?v=3a8H6JDI_aE',
         tips: ['...'],
@@ -391,7 +391,7 @@ export const lessonData: LessonsData = {
       },
       'present-simple-affirmative': {
         title: 'Present simple. Affirmative',
-        id: 0,
+        id: 3,
         content:
           "Before we start, I advise you to check this topic [Simple word order](http://localhost:5173/Engverse#/lessons/A1/Grammar/simple-word-order) \n\n***\n\n **Present Simple affirmative** is used to talk about:  \n * Habits (things you do regularly)  \n * General truths / Facts  \n * Routines  \n * Schedules / Timetables  \n * States or feelings \n\n *** \n\n Here is the basic formula:  \n **Subject** + **Verb** *(+ s/es for he/she/it)* + **object** + *(place)* + *(time)* \n\n ## Subject + Verb table \n\n | Subject | Verb form |  \n|-----------|-----------|  \n| I | play |  \n| You | play |  \n| He / She / It | plays |  \n| We | play |  \n| They | play | \n\n As you may notice, we add **-s** at the end of the **verb** with **he / she / it**. Let's see how to form the **3rd** person: \n\n* **Most verbs: add -s**\n  * work → works, live → lives\n * **Verbs ending in -o, -ch, -sh, -ss, -x, -z: add -es:**\n   * go → goes, watch → watches, fix → fixes\n * **Verbs ending in -y:**\n   * consonant + y → change y → ies: study → studies\n   * vowel + y → just add -s: play → plays\n * **Irregular verbs:**\n   * have → has\n   * do → does\n   * be → I am, you/we/they are, he/she/it is",
         examples: [
@@ -548,9 +548,137 @@ export const lessonData: LessonsData = {
             },
           ],
         },
-        exerciseInfo: '## Input the right form of the verb',
+        exerciseInfo: '#### Input the right form of the verb',
         audioUrl: '',
         videoUrl: 'https://www.youtube.com/watch?v=a40K198s96E',
+        tips: [],
+        links: [{ text: '...', url: '...' }],
+      },
+      'present-simple-negative': {
+        title: 'Present Simple. Negative',
+        id: 4,
+        content:
+          "## **Negative form**\n\n**Negative** form is used to say that something is not true now, or that someone does not do a habit, routine, fact, or general truth. \n\n *** \n\n ### **Basic structure** \n\n **Subject** + *do / does* + *not* + base form of the **verb** \n\n [DANGER] Important \n\n //After ***do/does*** + ***not*** always use the base form of the main verb (no *-s*)  \n // - He does not likes it ❌  \n // - He does not like it ✅ \n\n | Subject | Full negative | Contracted negative |  \n|---------|---------------|---------------------|  \n| I | I do not | I don't |  \n| You | You do not | You don't |  \n| We | We do not | We don't |  \n| They | They do not | They don' |  \n| He / She / It | He does not | She doesn't | \n\n *** \n\n ### **Common mistakes** \n\n [DANGER] ❌ \n\n // He ***don't*** like coffee  \n // She doesn't ***goes*** to school \n\n [SUCCESS] ✅ \n\n // He ***doesn't*** like coffee  \n // She doesn't ***go*** to school",
+        examples: [],
+        exercises: {
+          text: [
+            {
+              question: 'He ... (not like) apples',
+              options: ['...'],
+              answer: "doesn't like",
+            },
+            {
+              question: 'They ... (not play) football on Sundays',
+              options: ['...'],
+              answer: "don't play",
+            },
+            {
+              question: 'She ... (not go) to school every day',
+              options: ['...'],
+              answer: "doesn't go",
+            },
+            {
+              question: 'I ... (not watch) TV in the evening',
+              options: ['...'],
+              answer: "don't watch",
+            },
+            {
+              question: 'We ... (not speak) Spanish',
+              options: ['...'],
+              answer: "don't speak",
+            },
+            {
+              question: 'He ... (not eat) meat',
+              options: ['...'],
+              answer: "doesn't eat",
+            },
+            {
+              question: 'They ... (not like) rainy days',
+              options: ['...'],
+              answer: "don't like",
+            },
+            {
+              question: 'She ... (not read) books at night',
+              options: ['...'],
+              answer: "doesn't read",
+            },
+            {
+              question: 'I ... (not drink) coffee in the morning',
+              options: ['...'],
+              answer: "don't drink",
+            },
+            {
+              question: 'We ... (not work) on Saturdays',
+              options: ['...'],
+              answer: "don't work",
+            },
+          ],
+          options: [
+            {
+              question: "He don't like apples ...",
+              options: ['', 'True', 'False'],
+              answer: 'False',
+            },
+            {
+              question: "She doesn't go to school on Sundays ...",
+              options: ['', 'True', 'False'],
+              answer: 'True',
+            },
+            {
+              question: "I doesn't drink coffee in the morning ...",
+              options: ['', 'True', 'False'],
+              answer: 'False',
+            },
+            {
+              question: "They don't like rainy days ...",
+              options: ['', 'True', 'False'],
+              answer: 'True',
+            },
+            {
+              question: "We doesn't work on Saturdays ...",
+              options: ['', 'True', 'False'],
+              answer: 'False',
+            },
+            {
+              question: "She doesn't read books at night ...",
+              options: ['', 'True', 'False'],
+              answer: 'True',
+            },
+            {
+              question: "I don't watch TV in the evening ...",
+              options: ['', 'True', 'False'],
+              answer: 'True',
+            },
+            {
+              question: "He doesn't eats meat ...",
+              options: ['', 'True', 'False'],
+              answer: 'False',
+            },
+            {
+              question: "They doesn't play football on Sundays ...",
+              options: ['', 'True', 'False'],
+              answer: 'False',
+            },
+            {
+              question: "We don't speak Spanish ...",
+              options: ['', 'True', 'False'],
+              answer: 'True',
+            },
+          ],
+
+          wordwall: [
+            {
+              question: 'string',
+              options: ['...'],
+              link: 'https://wordwall.net/uk/embed/a8a4e758e911473091a77dd912443672?themeId=1&templateId=36&fontStackId=0',
+              answer: 'string',
+            },
+          ],
+        },
+        exerciseInfo:
+          '#### Input the right negative form (**contracted negative**)',
+        audioUrl: '',
+        videoUrl: 'https://www.youtube.com/watch?v=BriKS4-Jam0',
         tips: [],
         links: [{ text: '...', url: '...' }],
       },

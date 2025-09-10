@@ -18,6 +18,12 @@
         "id": 3,
         "description": "Affirmative sentences in the Present Simple show that something happens regularly, is generally true, or is a fact. They state information in a direct and positive way.",
         "path": "present-simple-affirmative"
+      },
+      {
+        "title": "Present Simple. Negative",
+        "id": 4,
+        "description": "Negative sentences in the Present Simple show that something does not happen regularly, is not generally true, or is not a fact. They are used to say that an action, habit, or situation is absent or incorrect.",
+        "path": "present-simple-negative"
       }
     ],
     "Reading": [
