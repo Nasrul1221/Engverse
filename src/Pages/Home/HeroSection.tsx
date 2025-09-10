@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import hero from '../../assets/hero-logo.svg';
 import './styles.css';
-import { Container, Button, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 export default function HeroSection() {
   return (

@@ -1,4 +1,4 @@
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import headphones from '../../assets/Cards/headphones.svg';
 import notebook from '../../assets/Cards/notebook.svg';
 import pen from '../../assets/Cards/pen.svg';
