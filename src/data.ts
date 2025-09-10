@@ -559,7 +559,10 @@ export const lessonData: LessonsData = {
         id: 4,
         content:
           "## **Negative form**\n\n**Negative** form is used to say that something is not true now, or that someone does not do a habit, routine, fact, or general truth. \n\n *** \n\n ### **Basic structure** \n\n **Subject** + *do / does* + *not* + base form of the **verb** \n\n [DANGER] Important \n\n //After ***do/does*** + ***not*** always use the base form of the main verb (no *-s*)  \n // - He does not likes it ❌  \n // - He does not like it ✅ \n\n | Subject | Full negative | Contracted negative |  \n|---------|---------------|---------------------|  \n| I | I do not | I don't |  \n| You | You do not | You don't |  \n| We | We do not | We don't |  \n| They | They do not | They don' |  \n| He / She / It | He does not | She doesn't | \n\n *** \n\n ### **Common mistakes** \n\n [DANGER] ❌ \n\n // He ***don't*** like coffee  \n // She doesn't ***goes*** to school \n\n [SUCCESS] ✅ \n\n // He ***doesn't*** like coffee  \n // She doesn't ***go*** to school",
-        examples: [],
+        examples: [
+          '### Examples',
+          '\n - He does not play football.  \n - I do not like coffee.  \n - She does not live in Paris.  \n - We do not have a car.  \n - They do not speak French.',
+        ],
         exercises: {
           text: [
             {
@@ -679,6 +682,43 @@ export const lessonData: LessonsData = {
           '#### Input the right negative form (**contracted negative**)',
         audioUrl: '',
         videoUrl: 'https://www.youtube.com/watch?v=BriKS4-Jam0',
+        tips: [],
+        links: [{ text: '...', url: '...' }],
+      },
+      'present-simple-questions': {
+        title: 'Present Simple. Questions',
+        id: 5,
+        content:
+          "## **Questions** \n\n**Present Simple Questions** are questions about *habits, facts, schedules, or regular actions*. \n\n | Subject | Auxiliary verb |  \n|---------|----------|  \n| I / You / We / They | Do |  \n| He / She / It | Does | \n\n We use **auxiliary verbs** to create questions. \n\n **Auxiliary verbs**, or **helping verbs**, are verbs that help the main verb form *questions*, *negatives*, or *certain tenses*. They do not change the main meaning of the sentence. \n\n For instance: \n\n - **Do / Does / Did**  \n   - Do you like this fruit?  \n   - Does she live here?  \n - **Am / Is / Are**  \n   - Are you here?  \n   - Is he going home? \n\n [DANGER] Important \n\n //After ***do/does*** always use the base form of the main verb (no *-s*)  \n // - Does she likes my car? ❌  \n // - Does she like my car? ✅ \n\n *** \n\n ## **Negative questions** \n\n **Negative questions** are used to ask about something in a negative form. They are made by adding not after the **auxiliary verb** \n\n | Auxiliary verb | Not  | Subject | Main Verb | Object / Rest |  \n| ------------------- | -------- | ----------------- | ---------------- | ------------- |  \n| **do** | not *(don't)* | I / You / We / They| play / like / go | football? |  \n| **does** | not *(doesn't)* | He / She / It | play / like / go | football? | \n\n ## **Short answers** \n\n | Question Type | Question | Yes Answer | No Answer |  \n| --------------------- | ------------------------- | ------------- | --------------- |  \n| **Positive Question** | Do you like pizza? | Yes, I do. | No, I don't. |  \n|  | Does he play football? | Yes, he does. | No, he doesn't. |  \n| **Negative Question** | Don't you like pizza? | Yes, I do. | No, I don't.    |  \n|  | Doesn't he play football? | Yes, he does. | No, he doesn't. |",
+        examples: [
+          '### Examples',
+          "\n***\n * ### **Positive questions**  \n   1. Does he like pizza? No, he doesn't  \n   2. Do you play footbal? Yes, I do  \n   3. Do they go to school? Yes, they do  \n   4. Does she like coffee? No, she doesn't  \n   5. Do we need a ticket? Yes, we do  \n * ### **Negative Questions**  \n   1. Don't you like pizza? Yes, I do  \n   2. Doesn't he play football? No, he doesn't  \n   3. Don't they go to school? Yes, they do  \n   4. Doesn't she like coffee? No, she doesn't  \n   5. Don't we need a ticket? Yes, we do",
+        ],
+        exercises: {
+          text: [
+            {
+              question: 'string',
+              options: ['...'],
+              answer: 'string',
+            },
+          ],
+          options: [
+            {
+              question: 'I ... a teacher',
+              options: ['am', 'is', 'are'],
+              answer: 'string',
+            },
+          ],
+          wordwall: [
+            {
+              question: 'string',
+              answer: 'string',
+            },
+          ],
+        },
+        exerciseInfo: '',
+        audioUrl: '',
+        videoUrl: 'https://www.youtube.com/watch?v=1vhL6JwJfbY',
         tips: [],
         links: [{ text: '...', url: '...' }],
       },

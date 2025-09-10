@@ -28,7 +28,7 @@ export default function Lessons() {
   const lesson = data[level][type];
 
   return (
-    <section style={{ height: '90vh' }} className="d-flex">
+    <section className="d-flex ">
       <SideBar
         setLevel={setLevel}
         setType={setType}
@@ -88,7 +88,7 @@ export default function Lessons() {
         </Card>
       </MyOffcanvas>
 
-      <Container className="pt-4 ps-3 pe-3">
+      <Container className="pt-4 ps-3 pe-3 pb-3">
         <Button
           variant="outline-primary"
           onClick={() => setShow(true)}

@@ -8,7 +8,7 @@ export default function SharedLayout() {
     <div>
       <Header />
 
-      <div className="my-padding">
+      <div style={{ minHeight: '90vh' }} className="my-padding">
         <Outlet />
       </div>
 

@@ -12,7 +12,10 @@ interface MyProps {
 
 export default function SideBar({ setLevel, level, setType, type }: MyProps) {
   return (
-    <aside className="bg-light p-3 d-none d-sm-block">
+    <aside
+      style={{ minHeight: '90vh' }}
+      className="bg-light p-3 d-none d-sm-block"
+    >
       <Form className="d-flex flex-column gap-3 mb-3">
         <Form.Group controlId="level">
           <Form.Label className="my-label">Level</Form.Label>
