@@ -10,11 +10,9 @@ import type {
 } from 'mdast';
 import './styles.css';
 import { toString } from 'mdast-util-to-string';
-import { data } from 'react-router-dom';
 
 interface CustomNode extends Node {
   type: 'customNode';
-  value: string;
 }
 
 declare module 'mdast' {
@@ -23,12 +21,17 @@ declare module 'mdast' {
   }
 }
 
-export const myPlugin = () => (tree: Root) => {
-  visit(tree, (node: Node, index?: number, parent?: Parent) => {
-    if (!isParent(node)) return;
-    const firstText = node.children[0] as Text;
+export function remarkEngverse() {
+  return [myPlugin0, myPlugin1];
+}
 
-    if (!parent) return;
+// ----------------------------------------------------------- //
+export const myPlugin0 = () => (tree: Root) => {
+  visit(tree, 'paragraph', (node: Node, index?: number, parent?: Parent) => {
+    if (!isParent(node)) return;
+    const firstText = node.children[0];
+
+    if (!parent || !isText(firstText)) return;
 
     if (
       toString(firstText).startsWith('[DANGER]') ||
@@ -37,8 +40,8 @@ export const myPlugin = () => (tree: Root) => {
       const prefix = toString(firstText).startsWith('[DANGER]')
         ? '[DANGER]'
         : '[SUCCESS]';
-      const arr = findTextNodes(index as number, parent, '//');
-      if (arr.length === 0) return;
+      const arr = findTextNodes(node, '//');
+      if (!arr || !Array.isArray(arr)) return;
 
       const customNode: Paragraph = {
         type: 'paragraph',
@@ -65,49 +68,72 @@ export const myPlugin = () => (tree: Root) => {
         },
       };
 
-      parent.children.splice(index as number, 2, customNode);
-    }
-
-    for (let i = 0; i < node.children.length; i++) {
-      const arr: RootContent[] = [];
-      const iterChild = node.children[i];
-      if (iterChild.type === 'text' && 'value' in iterChild) {
-        const matches = [...iterChild.value.matchAll(/\^([^^]+)\^/g)]
-          .flat()
-          .map((item, index) => {
-            if (index % 2 !== 0) return item;
-          })
-          .filter((item) => item !== undefined);
-        const result = iterChild.value.split(/\^([^^]+)\^/g);
-
-        if (matches.length === 0) continue;
-        const setM = new Set(matches);
-
-        for (const item of result) {
-          if (setM.has(item)) {
-            const nodeItem: CustomNode = {
-              type: 'customNode',
-              value: item,
-            };
-            arr.push(nodeItem);
-            setM.delete(item);
-          } else {
-            const nodeItem: Text = {
-              type: 'text',
-              value: item,
-            };
-            arr.push(nodeItem);
-          }
-        }
-      }
-      if (arr.length !== 0) {
-        node.children.splice(i, 1, ...arr);
-      }
+      parent.children.splice(index as number, 1, customNode);
     }
   });
 };
 
-function findTextNodes(index: number, parent: Parent, char: string) {
+// ----------------------------------------------------------- //
+export const myPlugin1 = () => {
+  return (tree: Root) =>
+    visit(tree, 'text', (node: Node, index?: number, parent?: Parent) => {
+      const arr: RootContent[] = [];
+      const iterChild = node;
+      if (!isText(iterChild)) return;
+
+      const dangerRegExp = /\^([^^]+)\^/g;
+      const successRegExp = /\$(.+?)\$/g;
+
+      const matchedRegExp = [dangerRegExp, successRegExp].find((reg) =>
+        iterChild.value.match(reg),
+      );
+      let matches;
+      let result;
+
+      if (matchedRegExp) {
+        matches = [...iterChild.value.matchAll(matchedRegExp)].map(
+          (item) => item[1],
+        );
+        result = iterChild.value.split(matchedRegExp);
+      } else return;
+
+      console.log(matches);
+
+      if (matches.length === 0 || !result) return;
+
+      const setM = new Set(matches);
+
+      for (const item of result) {
+        if (setM.has(item)) {
+          const nodeItem: CustomNode = {
+            type: 'customNode',
+            data: {
+              hName: 'span',
+              hProperties: {
+                className:
+                  matchedRegExp === dangerRegExp ? 'dangerP' : 'successP',
+              },
+              hChildren: [{ type: 'text', value: item }],
+            },
+          };
+          arr.push(nodeItem);
+          setM.delete(item);
+        } else {
+          const nodeItem: Text = {
+            type: 'text',
+            value: item,
+          };
+          arr.push(nodeItem);
+        }
+      }
+      if (arr.length !== 0 && parent) {
+        parent.children.splice(index as number, 1, ...arr);
+      }
+    });
+};
+
+function findTextNodes(node: Node, char: string) {
+  if (!isParent(node)) return;
   const arr: PhrasingContent[] = [];
   const allowedTypes = [
     'text',
@@ -124,41 +150,41 @@ function findTextNodes(index: number, parent: Parent, char: string) {
     'footnoteReference',
   ];
 
-  for (let i = (index as number) + 1; i < parent.children.length; i++) {
-    const foo = parent.children[i];
+  for (let i = 1; i < node.children.length; i++) {
+    const foo = node.children[i];
 
-    if (!('children' in foo) || !toString(foo).startsWith(char)) break;
+    if (
+      foo.type === 'break' &&
+      !toString(node.children[i + 1]).startsWith(char)
+    )
+      break;
 
-    for (const child of foo.children) {
-      if (child.type === 'text' && child.value.startsWith(char)) {
-        child.value = child.value.replace(char, '');
-      }
+    if (foo.type === 'text' && foo.value.startsWith(char)) {
+      foo.value = foo.value.replace(char, '');
     }
 
-    for (const child of foo.children) {
-      if (allowedTypes.includes(child.type)) {
-        let className = 'paragraph';
-        let hName: string | undefined;
+    if (allowedTypes.includes(foo.type)) {
+      let className = 'paragraph';
+      let hName: string | undefined;
 
-        switch (child.type) {
-          case 'emphasis':
-            className = 'emphasis';
-            hName = 'em';
-            break;
-          case 'strong':
-            className = 'strong';
-            hName = 'strong';
-            break;
-        }
-
-        arr.push({
-          ...child,
-          data: {
-            hName,
-            hProperties: { className },
-          },
-        } as PhrasingContent);
+      switch (foo.type) {
+        case 'emphasis':
+          className = 'emphasis';
+          hName = 'em';
+          break;
+        case 'strong':
+          className = 'strong';
+          hName = 'strong';
+          break;
       }
+
+      arr.push({
+        ...foo,
+        data: {
+          hName,
+          hProperties: { className },
+        },
+      } as PhrasingContent);
     }
   }
 
@@ -167,4 +193,8 @@ function findTextNodes(index: number, parent: Parent, char: string) {
 
 function isParent(node: Node): node is Parent {
   return node && typeof node === 'object' && 'children' in node;
+}
+
+function isText(node: Node): node is Text {
+  return node && typeof node === 'object' && 'value' in node;
 }
