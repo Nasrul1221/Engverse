@@ -28,3 +28,8 @@ Engverse — це веб-додаток для вивчення англійсь
 - `Plugins/` — власні плагіни для роботи з Markdown (remark).
 - `assets/` — зображення, svg-іконки.
 - `data.ts`, `cards.json` — статичні дані для уроків/карток.
+
+---
+
+## ✅ Roadmap
+Check it yourself [Roadmap](./docs/roadmap.md)
