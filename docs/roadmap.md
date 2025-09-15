@@ -1,8 +1,20 @@
-```mermaid
-flowchart TD
-    A[MVP] --> B[Lessons: Markdown content, Text exercises, Profile]
-    B --> C[Backend Integration]
-    C --> D[User auth & registration, Progress saving, Dynamic lessons]
-    D --> E[Advanced Features]
-    E --> F[Audio/Video exercises, Progress statistics, Achievements, UI customization]
-```
+# Engverse Roadmap
+
+## MVP
+- [ ] Lessons
+  - [X] Markdown content
+  - [X] Text exercises
+  - [ ] Add lessons for each level and topic
+
+## Backend Integration
+- [ ] User auth & registration
+- [ ] Progress saving
+- [ ] Dynamic lessons
+- [ ] Allow customers to save their vocab
+- [ ] Teacher account
+
+## Advanced Features
+- [ ] Audio/Video exercises
+- [ ] Progress statistics
+- [ ] Achievements
+- [ ] UI customization
