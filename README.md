@@ -25,3 +25,8 @@ Main directories:
 - `Plugins/` — custom Markdown plugins.
 - `assets/` — static images and SVG icons.
 - `data.ts`, `cards.json` — static content for lessons/cards.
+
+---
+
+## ✅ Roadmap
+Check it yourself [Roadmap](./docs/roadmap.md)
