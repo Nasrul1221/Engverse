@@ -1,7 +1,7 @@
 # 🌍 Engverse
 
 **Engverse** is a web application for learning English.  
-At the current stage, the basic functionality (**MVP**) is implemented: lessons, exercises, and a simple profile page.  
+At the current stage, the basic functionality (**MVP**) is implemented: lessons, exercises.
 In the future, the project will include a backend to support features like saving progress, user authentication, and more interactive content.
 
 ---
